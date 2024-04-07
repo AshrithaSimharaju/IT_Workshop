@@ -1,0 +1,122 @@
+user@shu:~$ ls
+ array   class   Desktop     Downloads   DSAlab   file    file2  'img tag.html'   java     Music     Pictures   practice   snap     Templates
+ awt     dbms    Documents   DSA         f.html   file1   html    internal        mobile   oopslab   ppsLab     Public     string   Videos
+user@shu:~$ cat> file
+hello world
+ubuntu
+unix commands
+user@shu:~$ cat file
+hello world
+ubuntu
+unix commands
+user@shu:~$ mv file1 file2
+user@shu:~$ ls
+ array   class   Desktop     Downloads   DSAlab   file    html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    Documents   DSA         f.html   file2  'img tag.html'   java       Music    Pictures   practice   snap     Templates
+user@shu:~$ touch file3
+user@shu:~$ ls
+ array   class   Desktop     Downloads   DSAlab   file    file3  'img tag.html'   java     Music     Pictures   practice   snap     Templates
+ awt     dbms    Documents   DSA         f.html   file2   html    internal        mobile   oopslab   ppsLab     Public     string   Videos
+user@shu:~$ mv file2 file3
+user@shu:~$ ls
+ array   class   Desktop     Downloads   DSAlab   file    html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    Documents   DSA         f.html   file3  'img tag.html'   java       Music    Pictures   practice   snap     Templates
+user@shu:~$ rm file3
+user@shu:~$ ls
+ array   class   Desktop     Downloads   DSAlab   file  'img tag.html'   java     Music     Pictures   practice   snap     Templates
+ awt     dbms    Documents   DSA         f.html   html   internal        mobile   oopslab   ppsLab     Public     string   Videos
+user@shu:~$ mkdir dir1
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    dir1      Downloads   DSAlab   file    'img tag.html'   java       Music    Pictures   practice   snap     Templates
+user@shu:~$ rmdir dir1
+user@shu:~$ ls
+ array   class   Desktop     Downloads   DSAlab   file  'img tag.html'   java     Music     Pictures   practice   snap     Templates
+ awt     dbms    Documents   DSA         f.html   html   internal        mobile   oopslab   ppsLab     Public     string   Videos
+user@shu:~$ mkdir dir1
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    dir1      Downloads   DSAlab   file    'img tag.html'   java       Music    Pictures   practice   snap     Templates
+user@shu:~$ cd dir1
+user@shu:~/dir1$ cd ..
+user@shu:~$ pwd dir1
+/home/user
+user@shu:~$ touch file1
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   file1  'img tag.html'   java     Music     Pictures   practice   snap     Templates
+ awt     dbms    dir1      Downloads   DSAlab   file     html    internal        mobile   oopslab   ppsLab     Public     string   Videos
+user@shu:~$ touch file2
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   file1   html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    dir1      Downloads   DSAlab   file     file2  'img tag.html'   java       Music    Pictures   practice   snap     Templates
+user@shu:~$ cat file
+hello world
+ubuntu
+unix commands
+user@shu:~$ pwd file1
+/home/user
+user@shu:~$ touch file2
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   file1   html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    dir1      Downloads   DSAlab   file     file2  'img tag.html'   java       Music    Pictures   practice   snap     Templates
+user@shu:~$ cat>file 2
+cat: 2: No such file or directory
+user@shu:~$ cat>file2
+hi rgukt basar students,welcome to rgukt basar the world of education
+user@shu:~$ cat file2
+hi rgukt basar students,welcome to rgukt basar the world of education
+user@shu:~$ whoami
+user
+user@shu:~$ id
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare)
+user@shu:~$ groups
+user adm cdrom sudo dip plugdev lpadmin lxd sambashare
+user@shu:~$ who
+user     :0           2024-03-19 14:43 (:0)
+user@shu:~$ last
+user     :0           :0               Tue Mar 19 14:43   still logged in
+reboot   system boot  5.15.0-91-generi Tue Mar 19 14:42   still running
+user     :0           :0               Tue Mar 19 14:32 - down   (00:00)
+reboot   system boot  5.15.0-91-generi Tue Mar 19 14:32 - 14:33  (00:00)
+user     :0           :0               Tue Mar 19 13:49 - down   (00:12)
+reboot   system boot  5.15.0-91-generi Tue Mar 19 13:49 - 14:02  (00:12)
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   file1   html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    dir1      Downloads   DSAlab   file     file2  'img tag.html'   java       Music    Pictures   practice   snap     Templates
+user@shu:~$ mkdir dir2
+user@shu:~$ ls
+ array   class   Desktop   dir2        Downloads   DSAlab   file    file2  'img tag.html'   java     Music     Pictures   practice   snap     Templates
+ awt     dbms    dir1      Documents   DSA         f.html   file1   html    internal        mobile   oopslab   ppsLab     Public     string   Videos
+user@shu:~$ rmdir dir2
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   file1   html            internal   mobile   oopslab    ppsLab     Public   string      Videos
+ awt     dbms    dir1      Downloads   DSAlab   file     file2  'img tag.html'   java       Music    Pictures   practice   snap     Templates 
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   file2  'img tag.html'   java     Music     Pictures   practice  'python sql'   string      Videos
+ awt     dbms    dir1      Downloads   DSAlab   file     html    internal        mobile   oopslab   ppsLab     Public     snap          Templates
+user@shu:~$ cat>file
+hi rgukt basar,
+welcome to our bright students
+user@shu:~$ cat file
+hi rgukt basar,
+welcome to our bright students
+user@shu:~$ mv file file2
+user@shu:~$ ls
+ array   class   Desktop   Documents   DSA      f.html   html            internal   mobile   oopslab    ppsLab     Public        snap     Templates
+ awt     dbms    dir1      Downloads   DSAlab   file2   'img tag.html'   java       Music    Pictures   practice  'python sql'   string   Videos
+user@shu:~$ cat file2
+hi rgukt basar,
+welcome to our bright students
+user@shu:~$ mkdir dir2
+user@shu:~$ ls
+ array   class   Desktop   dir2        Downloads   DSAlab   file2  'img tag.html'   java     Music     Pictures   practice  'python sql'   string      Videos
+ awt     dbms    dir1      Documents   DSA         f.html   html    internal        mobile   oopslab   ppsLab     Public     snap          Templates
+user@shu:~$ cd dir2
+user@shu:~/dir2$ cat>file
+hello world 
+welcome to linux commands
+user@shu:~/dir2$ 
+user@shu:~/dir2$ cat file
+hello world
+welcome to linux commands
+

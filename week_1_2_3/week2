@@ -1,0 +1,293 @@
+user@shu:~$ shutdown time 3s
+Failed to parse time specification: time
+user@shu:~$ shutdown -r +2
+Shutdown scheduled for Tue 2024-03-26 15:11:30 UTC, use 'shutdown -c' to cancel.
+user@shu:~$ shutdown -c
+user@shu:~$ awk file1.txt
+awk: 1: unexpected character '.'
+user@shu:~$ cat>file1.txt
+venky window id 4567
+arun storage id 2456
+name unix id 4352
+user linux id 256
+user@shu:~$ aek '{print $1}' file1.txt
+
+Command 'aek' not found, did you mean:
+
+  command 'ark' from snap ark (23.08.4)
+  command 'ack' from deb ack (3.3.1-1)
+  command 'aec' from deb libaec-tools (1.0.4-1)
+  command 'awk' from deb gawk (1:5.0.1+dfsg-1ubuntu0.1)
+  command 'awk' from deb mawk (1.3.4.20200120-2)
+  command 'awk' from deb original-awk (2012-12-20-6)
+  command 'ark' from deb ark (4:19.12.3-0ubuntu1.2)
+
+See 'snap info <snapname>' for additional versions.
+
+user@shu:~$ awt '{print $1}' file1.txt
+
+Command 'awt' not found, but there are 13 similar ones.
+
+user@shu:~$ awk '{print $1}' file1.txt
+venky
+arun
+name
+user
+user@shu:~$ free m
+              total        used        free      shared  buff/cache   available
+Mem:        7901560     1066944     5754640      129668     1079976     6448052
+Swap:       2097148           0     2097148
+user@shu:~$ free m |awk '/mem/'
+user@shu:~$ awk '{print NR,$0}' file1.txt
+1 venky window id 4567
+2 arun storage id 2456
+3 name unix id 4352
+4 user linux id 256
+user@shu:~$ ftp ftp.dlptest.com
+ftp: connect: Network is unreachable
+ftp> user@shu:~$ ftp ftp.dlptest.com
+Connected to ftp.dlptest.com.
+220 Welcome to the DLP Test FTP Server
+Name (ftp.dlptest.com:user): dlpuser
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> ^C
+ftp> exit
+221 Goodbye.
+user@shu:~$ ssh
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command]
+user@shu:~$ ftp ftp.dlptest.com
+Connected to ftp.dlptest.com.
+220 Welcome to the DLP Test FTP Server
+Name (ftp.dlptest.com:user): dlpuser
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ssh
+?Invalid command
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> get some_text
+local: some_text remote: some_text
+200 PORT command successful. Consider using PASV.
+550 Failed to open file.
+ftp> get file1.txt
+local: file1.txt remote: file1.txt
+200 PORT command successful. Consider using PASV.
+550 Failed to open file.
+ftp> exit
+^C
+
+ftp> ^Z
+[1]+  Stopped                 ftp ftp.dlptest.com
+user@shu:~$ ssh ashritha@tty.sdf.org
+The authenticity of host 'tty.sdf.org (209.160.32.186)' can't be established.
+ED25519 key fingerprint is SHA256:ZjwbO7AU8rHJExYrmZS2LqGZ7WfdoELfMrF54W92PYA.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'tty.sdf.org,209.160.32.186' (ED25519) to the list of known hosts.
+ashritha@tty.sdf.org's password: 
+Connection closed by 209.160.32.186 port 22
+user@shu:~$ mkdir dir1
+mkdir: cannot create directory ‘dir1’: File exists
+user@shu:~$ mkdir dir3
+user@shu:~$ cd dir3
+user@shu:~/dir3$ touch abc.txt
+user@shu:~/dir3$ ls
+abc.txt
+user@shu:~/dir3$ exit
+exit
+There are stopped jobs.
+user@shu:~/dir3$ cd ..
+user@shu:~$ chmod
+chmod: missing operand
+Try 'chmod --help' for more information.
+user@shu:~$ ls
+ array   daa       Desktop   dir3        DSA            f.html      geekfile.txt    'img tag.html'   mobile          Music        Pictures   Public        string
+ awt     day.txt   dir1      Documents   DSAlab         file1.txt   grepfilter.txt   internal        monthfile.txt   number.txt   ppsLab    'python sql'   Templates
+ class   dbms      dir2      Downloads   employee.txt   file2       html             java            monthfiletxt    oopslab      practice   snap          Videos
+user@shu:~$ chmod a=w file1.txt
+user@shu:~$ chmod a=rwx file1.txt
+user@shu:~$ chmod u+x file1.txt
+user@shu:~$ chmod go-w file1.txt
+user@shu:~$ ls-l
+ls-l: command not found
+user@shu:~$ ls -l
+total 152
+drwxrwxr-x  2 user user 4096 Nov 29 14:42  array
+drwxrwxr-x  2 user user 4096 Feb 19 23:37  awt
+drwxrwxr-x  2 user user 4096 Dec 18 23:36  class
+drwxrwxr-x  2 user user 4096 Mar 24 21:55  daa
+-rw-rw-r--  1 user user   39 Mar 26 14:46  day.txt
+drwxrwxr-x  2 user user 4096 Mar 16 21:12  dbms
+drwxr-xr-x  4 user user 4096 Mar 18 18:00  Desktop
+drwxrwxr-x  2 user user 4096 Mar 19 15:13  dir1
+drwxrwxr-x  2 user user 4096 Mar 19 15:49  dir2
+drwxrwxr-x  2 user user 4096 Mar 26 16:32  dir3
+drwxr-xr-x  2 user user 4096 Mar 16 21:17  Documents
+drwxr-xr-x  2 user user 4096 Mar 26 11:00  Downloads
+drwxrwxr-x  2 user user 4096 Oct  7 11:28  DSA
+drwxrwxr-x  2 user user 4096 Sep 25  2023  DSAlab
+-rw-rw-r--  1 user user  132 Mar 26 14:56  employee.txt
+-rw-rw-r--  1 user user  836 Mar 17 08:29  f.html
+-rwxr-xr-x  1 user user   78 Mar 26 15:17  file1.txt
+-rw-rw-r--  1 user user   47 Mar 19 15:47  file2
+-rw-rw-r--  1 user user   31 Mar 26 14:44  geekfile.txt
+-rw-rw-r--  1 user user  106 Mar 26 14:19  grepfilter.txt
+drwxrwxr-x  3 user user 4096 Mar 17 14:58  html
+-rw-rw-r--  1 user user  166 Mar 18 09:42 'img tag.html'
+drwxrwxr-x  2 user user 4096 Feb 18 14:28  internal
+drwxrwxr-x 14 user user 4096 Mar 26 11:03  java
+drwxrwxr-x  3 user user 4096 Dec 29 22:57  mobile
+-rw-rw-r--  1 user user    0 Mar 26 14:38  monthfile.txt
+-rw-rw-r--  1 user user   25 Mar 26 14:32  monthfiletxt
+drwxr-xr-x  2 user user 4096 Feb 22 10:22  Music
+-rw-rw-r--  1 user user   10 Mar 26 14:36  number.txt
+drwxrwxr-x  2 user user 4096 Dec 18 23:10  oopslab
+drwxr-xr-x  3 user user 4096 Mar 26 11:03  Pictures
+drwxrwxr-x  3 user user 4096 Jul 12  2023  ppsLab
+drwxrwxr-x  6 user user 4096 Mar 15 11:19  practice
+drwxr-xr-x  2 user user 4096 Mar 16  2022  Public
+drwxrwxr-x  2 user user 4096 Mar 26 15:07 'python sql'
+drwx------  3 user user 4096 Jan 12  2023  snap
+drwxrwxr-x  2 user user 4096 Apr 30  2023  string
+drwxr-xr-x  3 user user 4096 Jan  6 16:39  Templates
+drwxr-xr-x  5 user user 4096 Mar 13 21:16  Videos
+user@shu:~$ cat> grepfilter.txt
+welcome to ubuntu
+hii this is linux/unix commands
+rgukt rajiv gandhi university of knowledge technologies
+user@shu:~$ grep "rgukt" grepfilter.txt
+rgukt rajiv gandhi university of knowledge technologies
+user@shu:~$ grep 's/rgukt/RGUKT/' grepfilter.txt
+user@shu:~$ grep -n "unix" grepfilter.txt
+2:hii this is linux/unix commands
+user@shu:~$ grep -h unix grepfilter.txt
+hii this is linux/unix commands
+user@shu:~$ grep -o unix grepfilter.txt
+unix
+user@shu:~$ grep -e unix grepfilter.txt
+hii this is linux/unix commands
+user@shu:~$ grep -v unix grepfilter.txt
+welcome to ubuntu
+rgukt rajiv gandhi university of knowledge technologies
+user@shu:~$ grep -o "unix" geekfile.txt
+grep: geekfile.txt: No such file or directory
+user@shu:~$ grep "^unix" grepfilter.txt
+user@shu:~$ grep -c "o" grepfilter.txt 
+3
+user@shu:~$ grep -o "o" grepfilter.txt 
+o
+o
+o
+o
+o
+o
+o
+user@shu:~$ grep -c grepfilter.txt
+0
+user@shu:~$ grep -v unix grepfilter.txt
+welcome to ubuntu
+rgukt rajiv gandhi university of knowledge technologies
+user@shu:~$ grep -c unix grepfilter.txt
+1
+user@shu:~$ grep -v "this" grepfilter.txt
+welcome to ubuntu
+rgukt rajiv gandhi university of knowledge technologies
+user@shu:~$ cat>monthfiletxt
+August               
+September
+October
+user@shu:~$ &sort -M monthfiletxt
+bash: syntax error near unexpected token `&'
+user@shu:~$ sort -M monthfiletxt
+August
+September
+October
+user@shu:~$ cat>monthfile.txt
+August
+March
+December
+user@shu:~$ sort -M monthfile.txt
+March
+August
+December
+user@shu:~$ cat>number.txt
+23
+0
+98
+6
+user@shu:~$ sort -n number.txt
+0
+6
+23
+98
+user@shu:~$ sort -o monthfile.txt
+user@shu:~$ sort -r monthfile.txt
+user@shu:~$ sort -nr monthfile.txt
+user@shu:~$ sort -k monthfile.txt
+sort: invalid number at field start: invalid count at start of ‘monthfile.txt’
+user@shu:~$ sort -k number.txt
+sort: invalid number at field start: invalid count at start of ‘number.txt’
+user@shu:~$ cat>geekfile.txt
+Unix
+ubuntu
+RGUKT Basar Nirmal
+user@shu:~$ sed 's/unix/UNIIX/' geekfile.txt
+Unix
+ubuntu
+RGUKT Basar Nirmal
+user@shu:~$ cat> day.txt
+monday
+thrusday
+friday
+sunday
+saturday
+user@shu:~$ sort -d day.txt
+friday
+monday
+saturday
+sunday
+thrusday
+user@shu:~$ sed 's/Unix/UNIX/' geekfile.txt
+UNIX
+ubuntu
+RGUKT Basar Nirmal
+user@shu:~$ cat>employee.txt
+ashritha manager account 85000
+sunil clerk account 2500 
+varun manager sales 50000
+amit manager account 47000      
+tarun peon sales 15000
+user@shu:~$ awk '/manager/{print}' employee.txt
+ashritha manager account 85000
+varun manager sales 50000
+amit manager account 47000
+user@shu:~$ sed 's/ubuntu/UBUNTU/g' geekfile.txt
+Unix
+UBUNTU
+RGUKT Basar Nirmal
+user@shu:~$ sed 's/u/D/g' geekfile.txt
+Unix
+DbDntD
+RGUKT Basar Nirmal
+user@shu:~$ sed 's/u/D/' geekfile.txt
+Unix
+Dbuntu
+RGUKT Basar Nirmal
+user@shu:~$ sed 's/Dbuntu/UBUNTU/g' geekfile.txt
+Unix
+ubuntu
+RGUKT Basar Nirmal
+
